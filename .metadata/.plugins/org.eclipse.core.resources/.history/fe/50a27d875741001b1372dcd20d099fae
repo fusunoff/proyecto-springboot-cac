@@ -1,0 +1,5 @@
+package com.fio.springboot.app.controller;
+
+public class AppController {
+
+}
