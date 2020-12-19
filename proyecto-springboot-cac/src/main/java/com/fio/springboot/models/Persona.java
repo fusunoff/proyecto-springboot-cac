@@ -11,5 +11,5 @@ public class Persona {
 	//Prueba prueba prueba prueba prueba
 	private String nombre;
 	private String apellido;
-	private String edad;
+	private Integer edad;
 }

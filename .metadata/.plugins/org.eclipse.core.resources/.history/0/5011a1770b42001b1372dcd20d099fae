@@ -1,0 +1,5 @@
+package com.fio.springboot.app.config;
+
+public class SpringFoxConfig {
+
+}

@@ -1,0 +1,45 @@
+package com.fio.springboot.app.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fio.springboot.models.Perro;
+import com.fio.springboot.models.Persona;
+
+@RestController
+public class AppController {
+	
+//	PRIMER ENDPOINT O REQUEST CONTIENE POR STRING TAGS DE HTML
+
+	@RequestMapping(value = "/obtenerOffice", method = RequestMethod.GET)
+	String home() {
+		return "<h1>Buenas noches, Equipo CaC </h1>" + " <h2>a romperla con Springboot</h2>"
+				+ "<iframe src=\"https://giphy.com/embed/5wWf7H89PisM6An8UAU\" width=\"240\" height=\"180\" frameBorder=\"0\" class=\"giphy-embed\" allowFullScreen></iframe><p><a href=\"https://giphy.com/gifs/editingandlayout-the-office-michael-scott-5wWf7H89PisM6An8UAU\">via GIPHY</a></p>";
+	}
+
+	
+//	SEGUNDO ENDPOINT O REQUEST
+//	OBTIENE LOS DATOS DE LA PERSONA INSTANCIADA
+	
+	@RequestMapping("/obtenerPersona")
+	@ResponseBody
+
+	String persona() {
+		Persona persona1 = new Persona("Michael", "Scott", "48");
+		return persona1.toString();
+	}
+
+	
+//	TERCER ENDPOINT O REQUEST
+//	OBTIENE LOS DATOS DEL OBJETO PERRO INSTANCIADO
+	
+	@RequestMapping("/obtenerPerro")
+	@ResponseBody
+
+	String perro() {
+		Perro perro1 = new Perro("Patrón", "Mestizo", 3);
+		return perro1.toString();
+	}
+
+}
